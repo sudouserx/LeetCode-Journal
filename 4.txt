@@ -1,0 +1,48 @@
+Median of Two Sorted Arrays
+
+Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+
+The overall run time complexity should be O(log (m+n)).
+
+ 
+
+Example 1:
+
+Input: nums1 = [1,3], nums2 = [2]
+Output: 2.00000
+Explanation: merged array = [1,2,3] and median is 2.
+
+Example 2:
+
+Input: nums1 = [1,2], nums2 = [3,4]
+Output: 2.50000
+Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+
+ 
+
+ Reflection 
+ 
+    # intuitive approach 
+        # assign two pointers at the begining of the two Arrays
+            # compare the value, choose the least , move one pointer ahead 
+            # find the median of the newly sorted array
+            O(m+n)
+    
+    
+    : the calculation will be dependent on the total length of the array ( if even or odd )
+    
+    : take one array and calculate the mid position ( using binary method )
+         uptoMidCount = count the length until mid ( aka i)
+         calculate howmuch the other array should contain to fullfill the merged array left side 
+            HalfCount ( total length // 2)
+            other array's left portion = half - uptoMidCount ( aka of the first array )
+    : check if the end element of the first Array's portion is less than the pos[ mid + 1 ] of the other array and vice versa 
+        if so calculate the median based on the oddness and even-ness
+            if odd min(end elements of the array )
+            elif even max(end elements of the portion) + min(first elemets of out of the portion )  / 2
+    : else : 
+        : move the left ptr from the smallest Array to pos[mid + 1]  , ( since we need more element count from the first array )
+
+
+
+        
