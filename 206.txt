@@ -1,0 +1,23 @@
+Reverse Linked List
+
+Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+
+Reflection
+
+    iterative approach ( two pointer method ) T= O(n), Space = O(1)
+        : initialize two pointers current and previous ( curr = current head ) , ( prev = null)
+        : save the current.next temporarily 
+        : point the current's next pointer to prev
+            curr.next = prev
+        : shift both current and prev to the next node 
+            prev = curr
+            curr = tempSavedNext 
+    
+    recursive approach : 
+        # as it is recursive approach, traverse the linked list recursively 
+        once reached null ( or current.next == null ), 
+            # simplify the problem as reversing only 2 nodes ( starting from last ) upto head.next node
+        # once reached , finally make the current.next = head and head.next == null
+
+        
