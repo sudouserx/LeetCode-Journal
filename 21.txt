@@ -1,0 +1,26 @@
+Merge Two sorted Lists
+
+You are given the heads of two sorted linked lists list1 and list2.
+
+Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+
+Return the head of the merged linked list.
+
+
+
+Reflection
+    : create dummy node method : 
+        : DummyNode --> small1 --> small2
+
+    : main algo
+        create a dummy node 
+        compare the values of the nodes and add the least to the next pointer of the dummy node
+        traverse the list and the dummy node 
+
+        if either list is pointing to nulll, it will halt thus 
+            point the dummy pointer ( the last node of dummy ) , to the non-empty list
+        : return the dummy node head
+
+    : edge cases
+        : having one either of empty list
+        : reaching end of the list and looping
