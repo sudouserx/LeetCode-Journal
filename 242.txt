@@ -1,0 +1,28 @@
+Valid Anagram
+
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+Example 1:
+
+Input: s = "anagram", t = "nagaram"
+Output: true
+
+Example 2:
+
+Input: s = "rat", t = "car"
+Output: false
+
+
+Reflection : 
+    : the problem can intuitively be solved by sorting the given strings and checking if they are equal 
+
+    : the other solution would be by using dictionary , ( adding both strings to two different dictionaries )
+    { character : number of occurence }
+
+    : compare the dictionaries and return true if they are same , 
+    : else return false
+
+
+ 
